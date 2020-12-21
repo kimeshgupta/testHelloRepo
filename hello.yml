@@ -2,8 +2,8 @@ version: 1.0
 provider:
   name: openfaas
   # gateway: http://34.66.49.216:8080
-  # gateway: http://aa5ffad6566ee4aec9912750968d5fad-423686453.us-east-1.elb.amazonaws.com:8080
-  gateway: ${{ secrets.OPENFAAS_GATEWAY }}
+  gateway: http://aa5ffad6566ee4aec9912750968d5fad-423686453.us-east-1.elb.amazonaws.com:8080
+  # gateway: ${{ secrets.OPENFAAS_GATEWAY }}
 functions:
   testKimesh:
     lang: golang-http
