@@ -29,9 +29,10 @@ jobs:
         name: Login to OpenFaaS Gateway
         uses: docker://openfaas/faas-cli:latest-root
         with:
-          args: login -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} \
-                      -g ${{ secrets.OPENFAAS_GATEWAY }} \
-                      -g ${{ secrets.OPENFAAS_USER }}
+          args: login -u ${{ secrets.OPENFAAS_USER }} \
+                      -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} \
+                      -g ${{ secrets.OPENFAAS_GATEWAY }}
+                      
       -
         name: Login to DockerHub
         if: success()
