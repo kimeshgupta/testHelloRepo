@@ -30,8 +30,8 @@ jobs:
         uses: docker://openfaas/faas-cli:latest-root
         with:
           args: login -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} \
-                      -g ${{ secrets.OPENFAAS_GATEWAY }}
-                      -p ${{ secrets.OPENFAAS_USER }}
+                      -g ${{ secrets.OPENFAAS_GATEWAY }} \
+                      -g ${{ secrets.OPENFAAS_USER }}
       -
         name: Login to DockerHub
         if: success()
