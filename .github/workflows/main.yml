@@ -31,7 +31,7 @@ jobs:
         with:
           args: login -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} \
                       -g ${{ secrets.OPENFAAS_GATEWAY }}
-                      -u ${{ secrets.OPENFAAS_USER }}
+                      -p ${{ secrets.OPENFAAS_USER }}
       -
         name: Login to DockerHub
         if: success()
